@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Karaoke Challenge</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Fondo rayos láser -->
+  <div class="background">
+    <div class="laser laser1"></div>
+    <div class="laser laser2"></div>
+    <div class="laser laser3"></div>
+    <div class="laser laser4"></div>
+    <div class="laser laser5"></div>
+  </div>
+
+  <!-- Menú principal -->
+  <div id="menu" class="screen active menu-screen">
+    <div class="menu-content">
+      <h1>Karaoke Challenge</h1>
+      <p class="subtitle">¡Demuestra tus dotes de cantante!</p>
+      <div class="menu-buttons">
+        <button onclick="showScreen('songs')">Jugar</button>
+        <button onclick="showScreen('howto')">Cómo Jugar</button>
+        <button onclick="showScreen('credits')">Créditos</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lista de canciones -->
+  <div id="songs" class="screen">
+    <h2>Elige una canción</h2>
+    <div id="song-list" class="song-list"></div>
+    <button onclick="showScreen('menu')">Volver al Menú</button>
+  </div>
+
+  <!-- Pantalla de karaoke -->
+  <div id="karaoke" class="screen">
+    <div class="karaoke-container">
+      <img id="song-cover" src="" alt="Carátula">
+      <h2 id="song-title"></h2>
+      <h3 id="song-artist"></h3>
+      <audio id="audio" controls></audio>
+      <div id="lyrics" class="lyrics"></div>
+      <button onclick="stopKaraoke()">Salir</button>
+    </div>
+  </div>
+
+  <!-- Modal: Cómo jugar -->
+  <div id="howto" class="screen modal">
+    <div class="modal-content">
+      <h2>Cómo jugar</h2>
+      <p>Selecciona una canción, canta siguiendo la letra que se ilumina en el momento justo y... ¡diviértete!</p>
+      <button onclick="showScreen('menu')">Entendido</button>
+    </div>
+  </div>
+
+  <!-- Modal: Créditos -->
+  <div id="credits" class="screen modal">
+    <div class="modal-content">
+      <h2>Créditos</h2>
+      <p>Emilio José Arjona y Karaoke Challenge Team</p>
+      <button onclick="showScreen('menu')">Volver al Menú</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
