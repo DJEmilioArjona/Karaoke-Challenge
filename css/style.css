@@ -1,0 +1,19 @@
+/* --- Ya tienes lo de antes, aquí agregamos lo nuevo --- */
+
+#lyrics-box {
+  margin: 20px auto;
+  max-width: 600px;
+  height: 200px;
+  overflow-y: auto;
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.active-line {
+  color: #ff4d6d;
+  font-weight: bold;
+}

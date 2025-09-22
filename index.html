@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karaoke Challenge</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Pantalla principal -->
+  <div id="menu">
+    <h1>Karaoke Challenge</h1>
+    <h3>¡Canta, disfruta y desafíate a ti mismo!</h3>
+    <div class="menu-buttons">
+      <button onclick="showSongs()">Jugar</button>
+      <button onclick="showModal('howto')">Cómo jugar</button>
+      <button onclick="showModal('credits')">Créditos</button>
+    </div>
+  </div>
+
+  <!-- Pantalla de selección de canciones -->
+  <div id="song-list" class="hidden">
+    <h2>Elige tu canción</h2>
+    <div id="songs-container"></div>
+    <button onclick="backToMenu()">Volver al menú</button>
+  </div>
+
+  <!-- Pantalla del karaoke -->
+  <div id="karaoke" class="hidden">
+    <h2 id="karaoke-title"></h2>
+    <h3 id="karaoke-artist"></h3>
+    <div id="lyrics-box"></div>
+    <audio id="karaoke-audio" controls></audio>
+    <br>
+    <button onclick="backToSongs()">Volver a canciones</button>
+  </div>
+
+  <!-- Modal Cómo Jugar -->
+  <div id="modal-howto" class="modal hidden">
+    <div class="modal-content">
+      <p>
+        Si eres un amante del canto, ¡estás en el sitio correcto! <br>
+        Porque <strong>Karaoke Challenge</strong> es un juego en el que puedes cantar tus canciones favoritas, 
+        con letra sincronizada, ¡y hasta la puedes descargar con tu voz!
+      </p>
+      <button onclick="closeModal('howto')">Volver al menú</button>
+    </div>
+  </div>
+
+  <!-- Modal Créditos -->
+  <div id="modal-credits" class="modal hidden">
+    <div class="modal-content">
+      <p><strong>Emilio's Studio</strong><br>Emilio José Arjona</p>
+      <button onclick="closeModal('credits')">Volver al menú</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
